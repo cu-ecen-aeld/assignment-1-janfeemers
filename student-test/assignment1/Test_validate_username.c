@@ -20,7 +20,5 @@ void test_validate_my_username()
      */
     char const * const pMyUserName = my_username();
     char const * const pMyUserNameConfFile = malloc_username_from_conf_file();
-    const int result = strcmp(pMyUserName, pMyUserNameConfFile);
-
-    TEST_ASSERT_TRUE_MESSAGE(result == 0,"AESD students, please fix me!");
+    TEST_ASSERT_EQUAL_STRING(pMyUserName, pMyUserNameConfFile);
 }
